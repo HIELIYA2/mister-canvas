@@ -6,6 +6,5 @@ canvas {
     border: 3px solid khaki;
     background-color: whitesmoke;
   position: absolute;
-  top: 20%;
-  left: 20%;
+margin: 0 auto;
 }
