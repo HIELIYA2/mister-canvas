@@ -19,15 +19,15 @@ function canvasClicked(ev) {
     
     switch (gProperties.shapes) {
         
-        case 'square':
+        case square:
         drawCircle(ev.offsetX, ev.offsetY);
         break;
         
-        case  'circle':
+        case  circle:
         drawSquare(ev.offsetX, ev.offsetY);
         break;
         
-        case 'triangle':
+        case triangle:
         drawTriangle(ev.offsetX, ev.offsetY);
             break;
     
