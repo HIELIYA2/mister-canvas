@@ -16,31 +16,33 @@ function init() {
 
 function canvasClicked(ev) {
     console.log(gProperties.shapes);
-    
+
     switch (gProperties.shapes) {
-        
+
         case square:
-        drawCircle(ev.offsetX, ev.offsetY);
-        break;
-        
-        case  circle:
-        drawSquare(ev.offsetX, ev.offsetY);
-        break;
-        
+            drawCircle(ev.offsetX, ev.offsetY);
+            break;
+
+        case circle:
+            drawSquare(ev.offsetX, ev.offsetY);
+            break;
+
         case triangle:
-        drawTriangle(ev.offsetX, ev.offsetY);
+            drawTriangle(ev.offsetX, ev.offsetY);
             break;
-    
-        default :
-        drawLine(ev.offsetX, ev.offsetY);
+
+        default:
+            drawLine(ev.offsetX, ev.offsetY);
             break;
-        }
+    }
 
 }
 
 
 function drawLine(X, Y) {
-
+    gCtx.save()
+    gCtx.beginPath();
+    gCtx.moveTo(X, Y);
 
 }
 
@@ -62,7 +64,7 @@ function drawTriangle(X, Y) {
 function drawSquare() {
     gCtx.save()
     gCtx.beginPath();
-    gCtx.moveTo(X- 20, Y - 20);
+    gCtx.moveTo(X - 20, Y - 20);
     gCtx.lineTo(X + 20, Y - 20);
     gCtx.lineTo(X + 20, Y + 20);
     gCtx.lineTo(X - 20, Y + 20);
