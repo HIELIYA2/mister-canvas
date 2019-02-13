@@ -11,24 +11,29 @@
 
 <body onload="init()">
     <form>
-        <p></p>
         <label for="color-line"><input type="color" id="color-line" value="#ff0000" onchange="getColor(this.value,'line')"></label>
         <label for="color-fill"><input type="color" id="color-fill" value="#ff0000" onchange="getColor(this.value,'fill')"></label>
-        <label for="color-text">
 
-            <select onchange="getShape(this.value)" >
-                <option id="shapes" value="circle">circle</option>
-                <option id="shapes" value="triangle">triangle</option>
-                <option id="shapes" value="line">line</option>
-                <option id="shapes" value="square">square</option>
-            </select>
-
-        </label>
+        <select onchange="getShape(this.value)">
+            <option id="shapes" value="circle">circle</option>
+            <option id="shapes" value="triangle">triangle</option>
+            <option id="shapes" value="line">line</option>
+            <option id="shapes" value="square">square</option>
+        </select>
     </form>
 
-    <canvas height="500" width="500" id="mister-canvas" onclick="canvasClicked(event)"></canvas>
+    <form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(this, event)">
+        <input name="img" id="imgData" type="hidden" />
+        <button type="submit">Publish</button>
+    </form>
 
+    <canvas height="500" width="500" class ="canvas"id="mister-canvas" onclick="canvasClicked(event)"></canvas>
+
+    <div id="fb-root"></div>
+    <div class="share-container"></div>
+
+    <script src="./js/upload-service.js"></script>
+    <script src="./js/main.js"></script>
 </body>
-<script src="./js/main.js"></script>
 
 </html>

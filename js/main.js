@@ -4,8 +4,6 @@ var gCanvas;
 var gCtx;
 var gProperties = { shape: 'circle', line: 'black', fill: 'white'};
 
-
-
 function init() {
     gCanvas = document.querySelector('#mister-canvas');
     gCtx = gCanvas.getContext('2d')
@@ -13,9 +11,6 @@ function init() {
 function getShape(el) {
     gProperties.shape = el;
 }
-
-
-
 
 function getColor(el, key) {
     if (key === 'line') {
@@ -34,24 +29,6 @@ function getLineColor() {
     console.log(color)
 }
 function canvasClicked(ev) {
-<<<<<<< HEAD
-    console.log(gProperties.shapes);
-
-    switch (gProperties.shapes) {
-
-        case square:
-            drawCircle(ev.offsetX, ev.offsetY);
-            break;
-
-        case circle:
-            drawSquare(ev.offsetX, ev.offsetY);
-            break;
-
-        case triangle:
-            drawTriangle(ev.offsetX, ev.offsetY);
-            break;
-
-=======
     console.log(gProperties.shape);
 
     switch (gProperties.shape) {
@@ -71,12 +48,10 @@ function canvasClicked(ev) {
             drawTriangle(ev.offsetX, ev.offsetY);
             break;
 
->>>>>>> 55a4bbe0aa96f8d2883794ef7a9da2e675434ba9
         default:
             drawLine(ev.offsetX, ev.offsetY);
             break;
     }
-
 }
 
 
@@ -86,7 +61,6 @@ function drawLine(X, Y) {
     gCtx.moveTo(X, Y);
 
 }
-
 
 function drawTriangle(X, Y) {
     console.log(gProperties.fill)
