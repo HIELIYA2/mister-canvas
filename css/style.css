@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(16, 99, 99);
+}
+
+canvas {
+    border: 3px solid khaki;
+    background-color: whitesmoke;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
