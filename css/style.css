@@ -10,8 +10,6 @@ body ,html{
 
 }
 
-
-
 .grid {
     display: grid;
     grid-area: container;
@@ -47,6 +45,6 @@ body ,html{
     background-color: DodgerBlue;
   }
 
-  button{
+  /* button{
 
-  }
+  } */
