@@ -4,6 +4,10 @@ var gCanvas;
 var gCtx;
 var gProperties = { shape: 'circle', line: 'black', fill: 'white'};
 
+var canvas = document.querySelector(".canvas");
+canvas.width  = window.innerWidth;
+canvas.height = window.innerHeight;
+
 function init() {
     gCanvas = document.querySelector('#mister-canvas');
     gCtx = gCanvas.getContext('2d')
@@ -52,6 +56,7 @@ function canvasClicked(ev) {
             drawLine(ev.offsetX, ev.offsetY);
             break;
     }
+
 }
 
 

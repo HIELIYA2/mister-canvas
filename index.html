@@ -10,6 +10,7 @@
 </head>
 
 <body onload="init()">
+    <nav class="nav">
     <form>
         <label for="color-line"><input type="color" id="color-line" value="#ff0000" onchange="getColor(this.value,'line')"></label>
         <label for="color-fill"><input type="color" id="color-fill" value="#ff0000" onchange="getColor(this.value,'fill')"></label>
@@ -26,8 +27,8 @@
         <input name="img" id="imgData" type="hidden" />
         <button type="submit">Publish</button>
     </form>
-
-    <canvas height="500" width="500" class ="canvas"id="mister-canvas" onclick="canvasClicked(event)"></canvas>
+</nav>
+    <canvas height="500" width="500" class ="canvas grid"id="mister-canvas" onclick="canvasClicked(event)"></canvas>
 
     <div id="fb-root"></div>
     <div class="share-container"></div>
