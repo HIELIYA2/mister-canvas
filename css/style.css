@@ -3,8 +3,20 @@
     padding: 0;
 }
 
+body{
+    background-color: rgb(16, 99, 99);
+}
+
+canvas {
+    border: 3px solid khaki;
+    background-color: whitesmoke;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+/* 
 body ,html{
-    background-color: rgb(230, 16, 16);
+    background-color: rgba(165, 250, 186, 0.438);
     box-sizing: border-box;
     width: 100vw; 
 
@@ -44,7 +56,7 @@ body ,html{
 
   select{
     background-color: DodgerBlue;
-  }
+  } */
 
   /* button{
 

@@ -10,7 +10,6 @@
 </head>
 
 <body onload="init()">
-    <nav class="nav">
     <form>
     <a href="" type="button" onclick="downloadCanvas(this)">DOWNLOAD</a>
 
@@ -30,20 +29,18 @@
         <label for="color-fill"><input type="color" id="color-fill" value="#ffffff" onchange="getColor(this.value,'fill')"></label>
         <label for="color-text">
 
-        <select onchange="getShape(this.value)">
-            <option id="shapes" value="circle">circle</option>
-            <option id="shapes" value="triangle">triangle</option>
-            <option id="shapes" value="line">line</option>
-            <option id="shapes" value="square">square</option>
-        </select>
+            <select onchange="getShape(this.value)" >
+                <option id="shapes" value="circle">circle</option>
+                <option id="shapes" value="triangle">triangle</option>
+                <option id="shapes" value="line">line</option>
+                <option id="shapes" value="square">square</option>
+            </select>
+
+        </label>
     </form>
 
-
-</nav>
     <canvas height="500" width="500" id="mister-canvas" onmouseup="onStopDrew()" onmousemove="onMovment(event)" onmousedown="canvasClicked(event)"></canvas>
 
-    <script src="./js/upload-service.js"></script>
-    <script src="./js/main.js"></script>
 </body>
 <script src="./js/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

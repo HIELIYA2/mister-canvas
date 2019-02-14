@@ -7,9 +7,7 @@ var gMousePressed = false;
 var gLastX, gLastY;
 var gLink;
 
-var canvas = document.querySelector(".canvas");
-canvas.width  = window.innerWidth;
-canvas.height = window.innerHeight;
+
 
 function init() {
     gCanvas = document.querySelector('#mister-canvas');
@@ -21,6 +19,9 @@ function init() {
 function getShape(el) {
     gProperties.shape = el;
 }
+
+
+
 
 function getColor(el, key) {
     if (key === 'line') {
@@ -50,22 +51,16 @@ function drawLine(X, Y) {
     // gCtx.beginPath()
 
 
-<<<<<<< HEAD
-function drawLine(X, Y) {
-    gCtx.save()
-    gCtx.beginPath();
-    gCtx.moveTo(X, Y);
-=======
     gCtx.fillRect(X, Y, 2, 2);
 
     gCtx.fillStyle = `${gProperties.fill}`
     // gCtx.closePath()
->>>>>>> 06522bcd3d3d1c93d351ea54ee626227965d267f
 
     gCtx.stroke()
     gCtx.fill()
     gCtx.restore()
 }
+
 
 function drawTriangle(X, Y) {
 
@@ -173,6 +168,3 @@ function downloadCanvas(elLink) {
     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
-
-
-
