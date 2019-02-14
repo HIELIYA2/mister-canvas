@@ -11,25 +11,17 @@
 
 <body onload="init()">
     <form>
-    <a href="" type="button" onclick="downloadCanvas(this)">DOWNLOAD</a>
+        <a href="" type="button" onclick="downloadCanvas(this)">DOWNLOAD</a>
 
+        <div id="fb-root"></div>
+        <div class="fb-share-button" data-href="https://www.your-domain.com/your-page.html" data-layout="button_count">
+        </div>
 
-
-
-    <div id="fb-root">dfdffdd</div>
-    <div class="fb-share-button" 
-      data-href="https://www.your-domain.com/your-page.html" 
-      data-layout="button_count">
-    </div>
-
-
-
-        
         <label for="color-line"><input type="color" id="color-line" value="#000000" onchange="getColor(this.value,'line')"></label>
         <label for="color-fill"><input type="color" id="color-fill" value="#ffffff" onchange="getColor(this.value,'fill')"></label>
         <label for="color-text">
 
-            <select onchange="getShape(this.value)" >
+            <select onchange="getShape(this.value)">
                 <option id="shapes" value="circle">circle</option>
                 <option id="shapes" value="triangle">triangle</option>
                 <option id="shapes" value="line">line</option>
@@ -39,11 +31,11 @@
         </label>
     </form>
 
-    <canvas height="500" width="500" id="mister-canvas" onmouseup="onStopDrew()" onmousemove="onMovment(event)" onmousedown="canvasClicked(event)"></canvas>
+    <canvas height="500" width="500" id="mister-canvas" onmouseup="onStopDrew()" onmousemove="onMovment(event)"
+        onmousedown="canvasClicked(event)"></canvas>
 
 </body>
 <script src="./js/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 
 </html>

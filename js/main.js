@@ -7,8 +7,6 @@ var gMousePressed = false;
 var gLastX, gLastY;
 var gLink;
 
-
-
 function init() {
     gCanvas = document.querySelector('#mister-canvas');
     gCtx = gCanvas.getContext('2d')
@@ -20,47 +18,33 @@ function getShape(el) {
     gProperties.shape = el;
 }
 
-
-
-
 function getColor(el, key) {
     if (key === 'line') {
         gProperties.line = el;
-        // console.log(el)
     } else {
         gProperties.fill = el;
     }
-    // console.log(gProperties)
 }
-
 
 function getLineColor() {
     var elLine = document.querySelector('#color-line');
     var color = elLine.value;
-
 }
+
 function canvasClicked(ev) {
     gMousePressed = true;
 }
 
-
 function drawLine(X, Y) {
-
-
-    gCtx.save()
-    // gCtx.beginPath()
-
-
+    gCtx.save();
     gCtx.fillRect(X, Y, 2, 2);
 
     gCtx.fillStyle = `${gProperties.fill}`
-    // gCtx.closePath()
 
     gCtx.stroke()
     gCtx.fill()
     gCtx.restore()
 }
-
 
 function drawTriangle(X, Y) {
 
@@ -110,10 +94,6 @@ function drawCircle(X,Y) {
 function check(e) {
     var x = e.clientX;
     var y = e.clientY;
-
-
-    // console.log(x,y)
-    // document.getElementById("demo").innerHTML = coor;
   }
 
 function draw(X,Y ,isDown){
@@ -148,8 +128,6 @@ function onMovment(ev){
     if(gProperties.shape === 'line'){
         drawLine(X, Y)
     }
-
-    
 }
 
 function onStopDrew(){
@@ -158,7 +136,6 @@ function onStopDrew(){
 function downloadCanvas(elLink) {
     elLink.href = gCanvas.toDataURL()
     elLink.download = 'my-img.jpg'
-
 }
 
 (function(d, s, id) {
